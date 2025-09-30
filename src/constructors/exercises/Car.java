@@ -12,4 +12,23 @@ package constructors.exercises;
 
 public class Car
 {
+    private String brand;
+    private int year;
+    Car()
+    {
+        brand = "Unknown";
+        year = 0;
+    }
+
+    Car(String brand, int year)
+    {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    public void printCarInfo()
+    {
+        System.out.println("Car brand: " + brand);
+        System.out.println("Year: " + year);
+    }
 }

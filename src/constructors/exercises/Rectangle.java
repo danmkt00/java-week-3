@@ -12,4 +12,27 @@ package constructors.exercises;
 
 public class Rectangle
 {
+    private double width;
+    private double height;
+    Rectangle(double width, double height)
+    {
+        this.width = width;
+        this.height = height;
+    }
+
+    Rectangle(double width)
+    {
+        this.width = width;
+        height = width;
+    }
+
+    public double getArea()
+    {
+        return width * height;
+    }
+
+    public double getPerimeter()
+    {
+        return (width + height) * 2;
+    }
 }
