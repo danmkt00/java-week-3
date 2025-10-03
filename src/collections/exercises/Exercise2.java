@@ -1,5 +1,8 @@
 package collections.exercises;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  TODO:
  1. Create a Set<String> cities.
@@ -10,4 +13,21 @@ package collections.exercises;
 
 public class Exercise2
 {
+    public static void main(String[] args) {
+        Set<String> cities = new HashSet<>();
+        cities.add("Chernivtsi");
+        cities.add("Chernivtsi");
+        cities.add("Luhansk");
+        cities.add("Kyiv");
+        cities.add("Crimea");
+        cities.add("Kherson");
+        cities.add("Donetsk");
+        cities.add("Kyiv");      // duplicate
+
+        // Print all cities
+        System.out.println(cities);
+
+        // Check if a specific city exists
+        System.out.println(cities.contains("Kherson")); // true
+    }
 }
