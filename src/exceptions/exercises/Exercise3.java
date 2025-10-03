@@ -17,7 +17,11 @@ public class Exercise3
 
     public static void readFile(String filename)
     {
-        // FileReader fr = new FileReader(filename);    // uncomment to see the exception
-        System.out.println("File opened successfully!");
+        try {
+            FileReader fr = new FileReader(filename);    // uncomment to see the exception
+            System.out.println("File opened successfully!");
+        }catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        }
     }
 }

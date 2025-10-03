@@ -6,31 +6,28 @@ package exceptions.exercises;
  *  If the age is negative, throw and catch a custom InvalidAgeException.
  */
 
-public class Exercise5
-{
-    public static void main(String[] args)
-    {
+public class Exercise5 {
+    public static void main(String[] args) {
         int age = -5; // test value
 
-        // Check age and handle exception
+        try {
+            checkAge(age);
+            System.out.println("Age is valid: " + age);
+        } catch (InvalidAgeException e) {
+            System.out.println("Invalid age: " + e.getMessage());
+        }
     }
 
-    static void checkAge(int age) throws InvalidAgeException
-    {
-        if (age < 0)
-        {
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 0) {
             throw new InvalidAgeException("Age cannot be negative!");
         }
     }
 }
 
 // Custom exception class
-class InvalidAgeException extends Exception
-{
-    public InvalidAgeException(String message)
-    {
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
         super(message);
     }
 }
-
-
